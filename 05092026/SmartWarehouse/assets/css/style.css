@@ -1,0 +1,323 @@
+/* Custom Styles for SmartWarehouse */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f6f9;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 260px;
+    transition: margin 0.25s ease-out;
+    background: linear-gradient(180deg, #1a202c 0%, #2d3748 100%) !important;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 1.5rem 1.25rem;
+    font-size: 1.3rem;
+    background-color: rgba(0,0,0,0.2);
+}
+
+#sidebar-wrapper .list-group {
+    width: 100%;
+}
+
+#sidebar-wrapper .list-group-item {
+    border: none;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+#sidebar-wrapper .list-group-item:hover {
+    background-color: rgba(255,255,255,0.05) !important;
+    border-left-color: #0D8ABC;
+}
+
+#sidebar-wrapper .list-group-item.active {
+    background-color: rgba(255,255,255,0.1) !important;
+    border-left-color: #0D8ABC;
+    color: #fff;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+    margin-left: -260px;
+}
+
+/* Card Hover Animations */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+        margin-left: -260px;
+    }
+}
+
+/* ================================
+   Table Enhancements
+================================ */
+.table th {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6c757d;
+    white-space: nowrap;
+}
+
+.table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(13, 138, 188, 0.04);
+}
+
+/* ================================
+   Sidebar Sub-menu Label
+================================ */
+#sidebar-wrapper .sidebar-section-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: rgba(255,255,255,0.4);
+    padding: 0.8rem 1.5rem 0.3rem;
+    font-weight: 700;
+}
+
+#sidebar-wrapper .list-group-item.sub-item {
+    padding-left: 2.5rem;
+    font-size: 0.9rem;
+}
+
+/* ================================
+   Status Badges
+================================ */
+.badge.status-active {
+    background-color: #198754;
+}
+
+.badge.status-inactive {
+    background-color: #6c757d;
+}
+
+/* ================================
+   Page Header
+================================ */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.page-header h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0;
+}
+
+/* ================================
+   Pagination
+================================ */
+.pagination .page-link {
+    color: #0D8ABC;
+    border-radius: 6px !important;
+    margin: 0 2px;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0D8ABC;
+    border-color: #0D8ABC;
+}
+
+.pagination .page-link:hover {
+    background-color: rgba(13, 138, 188, 0.1);
+    color: #0D8ABC;
+    border-color: #0D8ABC;
+}
+
+/* ================================
+   Form Styles
+================================ */
+.form-label.required::after {
+    content: " *";
+    color: #dc3545;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0D8ABC;
+    box-shadow: 0 0 0 0.2rem rgba(13, 138, 188, 0.2);
+}
+
+/* ================================
+   Alert Styles
+================================ */
+.alert {
+    border-radius: 10px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.alert-danger {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* ================================
+   Button Styles
+================================ */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #0D8ABC;
+    border-color: #0D8ABC;
+}
+
+.btn-primary:hover {
+    background-color: #0b7aa8;
+    border-color: #0b7aa8;
+    transform: translateY(-1px);
+}
+
+/* ================================
+   Card Styles
+================================ */
+.card {
+    border-radius: 12px !important;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* ================================
+   Breadcrumb
+================================ */
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.82rem;
+}
+
+.breadcrumb-item a {
+    color: #0D8ABC;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+/* ================================
+   Fade In Animation
+================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.4s ease both;
+}
+
+/* ================================
+   Dashed Border Utility
+================================ */
+.border-dashed {
+    border-style: dashed !important;
+}
+
+.border-2 {
+    border-width: 2px !important;
+}
+
+/* ================================
+   Lokasi Status Card Selector
+================================ */
+.status-option {
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+}
+
+.status-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+}
+
+/* ================================
+   Kode Preview Box
+================================ */
+.kode-preview-box {
+    background: linear-gradient(135deg, rgba(13,138,188,0.05), rgba(13,138,188,0.12));
+    border: 2px dashed rgba(13,138,188,0.4);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* ================================
+   Font Monospace badge
+================================ */
+.font-monospace {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+}
+
+/* ================================
+   Rounded top/bottom helpers
+================================ */
+.rounded-top-4 {
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+}
+
+.rounded-bottom-4 {
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+}
